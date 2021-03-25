@@ -1,0 +1,17 @@
+spring:
+ application:
+  name: hr-api-gateway-zuul
+
+ cloud:
+  config:
+   uri: http://localhost:8888
+
+ profiles:
+  active: test
+
+# Actuator (Atualizar as configurações que pegamos do config server em tempo de execução)
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
